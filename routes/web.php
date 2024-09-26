@@ -76,7 +76,11 @@ Route::group(['prefix' => 'admin'], function () {
 //        ->middleware('permission:users-delete');
         Route::resource('governorates', GovernorateController::class);
         Route::resource('cities', CityController::class);
-        Route::resource('users', UserController::class);
+
+
+
+
+
         Route::resource('roles', RoleController::class);
         Route::get('roles/{id}/give-permission', [RoleController::class, 'addPermissionToRole']);
         Route::put('roles/{id}/give-permission', [RoleController::class, 'givePermissionToRole']);
